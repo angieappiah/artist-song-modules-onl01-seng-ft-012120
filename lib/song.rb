@@ -1,4 +1,4 @@
-# require 'relative'
+require 'relative'
 
 class Song
   
