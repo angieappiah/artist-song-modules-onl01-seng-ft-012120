@@ -1,10 +1,12 @@
-
-
 class Artist
- extend Memorable 
- 
   attr_accessor :name
   attr_reader :songs
+
+  extend Memorable::ClassMethods
+  extend Findable::ClassMethods
+  include Memorable::InstanceMethods
+  include Paramable::InstanceMethods
+
   @@artists = []
   
   def initialize
